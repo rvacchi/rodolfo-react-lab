@@ -7,6 +7,8 @@ import { SideBar } from "../components/SideBar";
 import { Video } from "../components/Video";
 import { useCreateSubcriberMutation } from "../graphql/generated";
 
+import imgUrl from '../../src/assests/cold_background.png'
+
 // const CREATE_SUBSCRIBER_MUTATION = gql`
 //     mutation CreateSubcriber ($name: String!, $email: String!) {
 //     createSubscriber(data: {name: $name, email:$email}) {
@@ -83,7 +85,7 @@ export function Subscribe(){
                 </div>
             </div>
 
-            <img src="/src/assests/cold_background.png" className="mt-10" alt=""></img>
+            <img src={imgUrl} className="mt-10" alt=""></img>
         </div>
     )
 }
