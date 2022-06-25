@@ -1,0 +1,15 @@
+schema: https://api-sa-east-1.graphcms.com/v2/cl4pmx9mb21ac01z4fulx24q1/master
+documents: './src/graphql/**/*.graphql' #tudo que estiver na pasta graphql
+generates:
+  ./src/graphql/generated.ts: #vai criar os tipos dentro desse arquivo na pasta graphql
+    plugins:
+      - typescript
+      - typescript-operations
+      #- typed-document-node
+      - typescript-react-apollo #adcionei a class de typo do apollo
+    config:
+      reactApolloVersion: 3
+      withHooks: true #cria um hook para cada query ex: useGetLessonsQuery
+      withHOC: false # high order component um padrao antigo do react que nao e mais usando
+      withComponent: false #nao deixar o graphql criar components para as queries
+      
